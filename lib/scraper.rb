@@ -22,11 +22,20 @@ def get_students_Twitter
 end
 
 def get_students_names
-  students = @html.search("h3").text.split()
-end
+  students = html.search("h3").to_s.split("</h3><h3>")
+  students[0]=students[0][4..-1]
+  students[-1]=students[-1][0..-6]
+return students
+  end
+
+  def get_students_blogs
+   blogs = html.search(".blog").map {|link| link["href"]}
+
+
+  end
 
 
 end
 
 my_scraper = Scraper.new("http://flatironschool-bk.herokuapp.com/")
-puts my_scraper.get_students_names
+puts my_scraper.get_students_blogs
