@@ -1,3 +1,6 @@
+### STUDET CLASS SPEC
+
+
 require '../lib/student.rb'
 
 stegosnorus = Student.new("Stegosnorus", "Twitter", "blog!")
