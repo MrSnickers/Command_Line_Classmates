@@ -30,14 +30,6 @@ def directory(student_directory)
     request_index -1
 end
 
-def launch (media, student_directory)
-    student_index = directory(student_directory)
-   if student_directory[student_index].media == "none"
-    puts "Sorry that student has not shared a #{media} account."
-   else
-    Launchy.open("#{student_directory[student_index].media}")
-   end
-    end
 
 
 puts "Do you want to look up the Twitter of a specific student? Type: 'T'"
@@ -50,9 +42,19 @@ response = gets.chomp
 case
 
 when response.downcase == "t"
-  launch("Twitter", student_directory)
+    student_index = directory(student_directory)
+   if student_directory[student_index].twitter == "none"
+      puts "Sorry that student has not shared a Twitter account."
+   else
+     Launchy.open("#{student_directory[student_index].twitter}")
+   end
 when response.downcase == "b"
-    launch("blog", student_directory)
+    student_index = directory(student_directory)
+   if student_directory[student_index].blog == "none"
+    puts "Sorry that student has not shared a blog."
+   else
+    Launchy.open("#{student_directory[student_index].blog}")
+   end
 when response.downcase == "r"
     random_twitter = student_directory.sample.twitter
     random_twitter = student_directory.sample.twitter if random_twitter == "none"
