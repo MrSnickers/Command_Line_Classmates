@@ -9,8 +9,8 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 You will need to install [`ruby`](https://www.ruby-lang.org/en/downloads/) and these gems:
-['awesome_print'](https://github.com/awesome-print/awesome_print)
-['launchy'](https://rubygems.org/gems/launchy)
+[`awesome_print`](https://github.com/awesome-print/awesome_print)
+[`launchy`](https://rubygems.org/gems/launchy)
 [`nokogiri`](https://rubygems.org/gems/nokogiri)
 
 
@@ -25,7 +25,7 @@ git clone https://github.com/MrSnickers/Command_Line_Classmates.git
 
 ## Running the tests
 
-The tests are run with [Rspec](http://rspec.info/).
+The tests are run with [`Rspec`](http://rspec.info/).
 ```
 cd spec
 rspec scraper_spec.rb
